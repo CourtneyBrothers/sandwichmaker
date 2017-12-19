@@ -19,5 +19,6 @@ submit.addEventListener("click", function(){
 menu.addEventListener("change", function(){
     console.log(event.target.value);
     console.log(event.target.closest("div").id);
+    sandwichMaker.addIngredient(event.target.closest("div").id,event.target.value);
 });
 
