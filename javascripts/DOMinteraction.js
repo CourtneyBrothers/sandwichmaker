@@ -25,7 +25,7 @@ let sandwichOutput = function(sandwichObject){
     let sandwichString = "";
     for (let ingredient in sandwichObject){
         for (let i=0; i < sandwichObject[ingredient].length; i++){
-            sandwichString += sandwichObject[ingredient][i];
+            sandwichString += `${sandwichObject[ingredient][i]} `;
         }
     }
     return sandwichString;
