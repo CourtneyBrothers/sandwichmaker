@@ -2,3 +2,4 @@ node_modules
 dist/bundle.js
 stylesheets/
 .sass-cache/
+package-lock.json
