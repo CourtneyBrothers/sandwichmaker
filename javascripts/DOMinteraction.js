@@ -6,6 +6,8 @@ let meat = document.getElementById("cheese");
 let condiments = document.getElementById("condiments");
 let veggies = document.getElementById("veggies");
 
+let sandwichMaker = require("./SandwichMaker");
+
 submit.addEventListener("click", function(){
     console.log("button clicked");
 });
