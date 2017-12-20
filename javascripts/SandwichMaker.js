@@ -49,6 +49,27 @@ module.exports.getSandwich = function(){
 };
 
 module.exports.removeIngredient = function(id, value){
-    sandwich[id].splice(sandwich[id].indexOf(value),1);
-    console.log("sandwich array", sandwich);
+    sandwich[id].splice(sandwich[id].indexOf(value), 1);
+    switch (id) {
+        case "bread":
+        total -= bread.addBread(value);
+        break;
+        case "meat":
+        total -= meat.addMeat(value);
+        break;
+        case "cheese":
+        total -= cheese.addCheese(value);
+        break;
+        case "condiments":
+        total -= condiments.addCondiments(value);
+        break;
+        case "veggies":
+        total -= veggies.addVegies(value);
+    }
+    console.log("your total", total);
+    return total;
+};
+
+module.exports.clearCategoryTotal = (category) => {
+    total -= bread.breadTotal();
 };

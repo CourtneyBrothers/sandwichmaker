@@ -24,9 +24,6 @@ function clearCheckboxes(div){
 
 menu.addEventListener("change", function(){
     let category = event.target.closest("div");
-    console.log(event.target.value);
-    console.log(event.target.closest("div").id);
-    sandwichMaker.addIngredient(category.id,event.target.value);
     if (event.target.value === "none"){
         clearCheckboxes(category);
     } if (!event.target.checked){
