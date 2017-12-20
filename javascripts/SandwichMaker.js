@@ -47,3 +47,8 @@ module.exports.getTotal = function(){
 module.exports.getSandwich = function(){
     return sandwich;
 };
+
+module.exports.removeIngredient = function(id, value){
+    sandwich[id].splice(sandwich[id].indexOf(value),1);
+    console.log("sandwich array", sandwich);
+};

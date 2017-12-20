@@ -29,6 +29,10 @@ menu.addEventListener("change", function(){
     sandwichMaker.addIngredient(category.id,event.target.value);
     if (event.target.value === "none"){
         clearCheckboxes(category);
+    } if (!event.target.checked){
+        sandwichMaker.removeIngredient(category.id, event.target.value);
+    } else if (event.target.checked){
+        sandwichMaker.addIngredient(category.id,event.target.value);
     }
 
 });
