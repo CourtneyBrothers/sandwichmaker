@@ -16,27 +16,28 @@ let sandwich = {
     "cheese":[]
 };
 
+
+
 module.exports.addIngredient = function(id, value){
-    if (id === "bread"){
     sandwich[id].push(value);
-    total += bread.addBread(value);
-     //returns bread price
-    } if (id === "cheese"){
-        sandwich[id].push(value);
+    switch (id){
+        case "bread": 
+        total += bread.addBread(value);
+        break;
+        case "cheese":
         total += cheese.addCheese(value);
-    } if (id === "meat"){
-        sandwich[id].push(value);
+        break;
+        case "meat":
         total += meat.addMeat(value);
-    }  if (id === "veggies"){
-        sandwich[id].push(value);
+        break;
+        case "veggies":
         total += veggies.addVeggie(value);
-    } if (id === "condiments"){
-        sandwich[id].push(value);
+        break;
+        case "condiments":
         total += condiments.addCondiment(value);
+
     }
-    
     return total;
-    
 };
 
 module.exports.getTotal = function(){
