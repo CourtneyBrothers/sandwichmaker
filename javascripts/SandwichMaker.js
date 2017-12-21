@@ -35,9 +35,11 @@ module.exports.addIngredient = function(id, value){
         break;
         case "condiments":
         total += condiments.addCondiment(value);
+        let outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "";
 
     }
-    return total;
+    return total.toFixed(2);
 };
 
 module.exports.getTotal = function(){
@@ -64,12 +66,15 @@ module.exports.removeIngredient = function(id, value){
         total -= condiments.addCondiments(value);
         break;
         case "veggies":
-        total -= veggies.addVegies(value);
+        total -= veggies.addVeggie(value);
     }
+    let outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = "";
     console.log("your total", total);
     return total;
 };
 
 module.exports.clearCategoryTotal = (category) => {
     total -= bread.breadTotal();
+    total -= veggies.veggieTotal();
 };
