@@ -63,7 +63,7 @@ module.exports.removeIngredient = function(id, value){
         total -= cheese.addCheese(value);
         break;
         case "condiments":
-        total -= condiments.addCondiments(value);
+        total -= condiments.addCondiment(value);
         break;
         case "veggies":
         total -= veggies.addVeggie(value);
@@ -75,6 +75,6 @@ module.exports.removeIngredient = function(id, value){
 };
 
 module.exports.clearCategoryTotal = (category) => {
-    total -= bread.breadTotal();
-    total -= veggies.veggieTotal();
+    sandwich[category]=[];
+    return sandwich;
 };
