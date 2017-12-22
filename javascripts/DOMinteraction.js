@@ -26,6 +26,7 @@ menu.addEventListener("change", function(){
     let category = event.target.closest("div");
     if (event.target.value === "none"){
         clearCheckboxes(category);
+        document.getElementById("output").innerHTML = "";
         //let outputDiv = document.getElementById("output").innerHTML = `NO ${category.id}`;
     } if (!event.target.checked){
         sandwichMaker.removeIngredient(category.id, event.target.value);

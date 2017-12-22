@@ -39,11 +39,11 @@ module.exports.addIngredient = function(id, value){
         outputDiv.innerHTML = "";
 
     }
-    return total.toFixed(2);
+    return total;
 };
 
 module.exports.getTotal = function(){
-    return total;
+    return total.toFixed(2);
 };
 
 module.exports.getSandwich = function(){
